@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * survey router
+ * demogr router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::survey.survey');
+module.exports = createCoreRouter('api::demogr.demogr');

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demogrs",
+  "info": {
+    "singularName": "demogr",
+    "pluralName": "demogrs",
+    "displayName": "demogr"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "text"
+    },
+    "engque": {
+      "type": "text"
+    },
+    "telque": {
+      "type": "text"
+    },
+    "engrec": {
+      "allowedTypes": [
+        "files",
+        "audios",
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "telrec": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

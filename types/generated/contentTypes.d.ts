@@ -362,30 +362,33 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiSurveySurvey extends Schema.CollectionType {
-  collectionName: 'surveys';
+export interface ApiDemogrDemogr extends Schema.CollectionType {
+  collectionName: 'demogrs';
   info: {
-    singularName: 'survey';
-    pluralName: 'surveys';
-    displayName: 'Survey';
+    singularName: 'demogr';
+    pluralName: 'demogrs';
+    displayName: 'demogr';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    propic: Attribute.Media;
+    category: Attribute.Text;
+    engque: Attribute.Text;
+    telque: Attribute.Text;
+    engrec: Attribute.Media;
+    telrec: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::survey.survey',
+      'api::demogr.demogr',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::survey.survey',
+      'api::demogr.demogr',
       'oneToOne',
       'admin::user'
     > &
@@ -718,7 +721,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::survey.survey': ApiSurveySurvey;
+      'api::demogr.demogr': ApiDemogrDemogr;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
